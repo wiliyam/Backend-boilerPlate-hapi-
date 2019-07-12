@@ -6,13 +6,13 @@ chai.use(chaiHttp);
 
 const baseUrl = "http://localhost:3000";
 
-describe("user POST method for Registration", () => {
+describe("Admin POST method for Registration", () => {
   it("should return 400 when wrong input or no input passes", done => {
     chai
       .request(baseUrl)
-      .post("/user/register")
+      .post("/admin/register")
       .set("content-type", "application/json")
-      .field("userName", "user")
+      .field("userName", "admin")
       .field("password", "test")
       .end((err, res) => {
         expect(res).to.have.status(400);
@@ -23,12 +23,12 @@ describe("user POST method for Registration", () => {
   it("should return 200 when new user registred successfully", done => {
     chai
       .request(baseUrl)
-      .post("/user/register")
+      .post("/admin/register")
       .set("content-type", "application/json")
-      .field("userName", "user")
+      .field("userName", "admin")
       .field("password", "test")
       .field("conformPassword", "test")
-      .field("email", "user@app.com")
+      .field("email", "admin@app.com")
       .field("dob", "01-01-2002")
       .end((err, res) => {
         expect(res).to.have.status(200);
@@ -36,16 +36,15 @@ describe("user POST method for Registration", () => {
         done();
       });
   });
-
-  it("should return 409 user already exist", done => {
+  it("should return 409 admin already exist", done => {
     chai
       .request(baseUrl)
-      .post("/user/register")
+      .post("/admin/register")
       .set("content-type", "application/json")
-      .field("userName", "user")
+      .field("userName", "admin")
       .field("password", "test")
       .field("conformPassword", "test")
-      .field("email", "user@app.com")
+      .field("email", "admin@app.com")
       .field("dob", "01-01-2002")
       .end((err, res) => {
         expect(res).to.have.status(409);
@@ -53,15 +52,4 @@ describe("user POST method for Registration", () => {
         done();
       });
   });
-
-  // it("should return 401 when  user is unauthorize", done => {
-  //   chai
-  //     .request(baseUrl)
-  //     .get("/user/getUser")
-  //     .set("content-type", "application/json")
-  //     .end((err, res) => {
-  //       expect(res).to.have.status(401);
-  //       done();
-  //     });
-  // });
 });

@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 const baseUrl = "http://localhost:3000";
 
 describe("user POST method for Registration", () => {
-  it("should return 400 when user not exist", done => {
+  it("should return 401 when user not exist", done => {
     chai
       .request(baseUrl)
       .post("/user/login")
@@ -15,7 +15,7 @@ describe("user POST method for Registration", () => {
       .field("email", "user234")
       .field("password", "test1223")
       .end((err, res) => {
-        expect(res).to.have.status(400);
+        expect(res).to.have.status(401);
         expect(res.body).to.have.property("message");
         done();
       });

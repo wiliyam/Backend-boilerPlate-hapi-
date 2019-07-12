@@ -52,14 +52,15 @@ const handler = async (req, h) => {
     email: req.payload.email
   };
   if (req.payload.password != req.payload.conformPassword)
+    //password validation
     return Boom.notAcceptable("Password must be match");
   try {
     const data = await user.findOne(checkCondition);
     if (data) return Boom.conflict("user already exist");
-    const hashPass = await getHash(req.payload.password);
+    const hashPass = await getHash(req.payload.password); //generate hash password
     console.log(hashPass);
     adminData["password"] = hashPass;
-    const result = await user.addUser(adminData);
+    const result = await user.addUser(adminData); //add user query
     if ((result.result.n = 1))
       return h.response({ message: "Account succesfully created.." });
     return Boom.badImplementation("Some thing went wrong");

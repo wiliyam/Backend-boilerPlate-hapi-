@@ -24,11 +24,11 @@ const handler = async (req, h) => {
   };
 
   try {
-    const userData = await user.findOne(condition);
-    if (!userData) return Boom.badRequest("Wrong Email id");
-    const res = await bcrypt.compare(req.payload.password, userData.password);
+    const userData = await user.findOne(condition); //check for  user
+    if (!userData) return Boom.unauthorized("Wrong Email id");
+    const res = await bcrypt.compare(req.payload.password, userData.password); //compare password
     if (!res) return Boom.unauthorized("Wrong password");
-    let token = getToken(userData._id, userData.email, userData.isAdmin);
+    let token = getToken(userData._id, userData.email, userData.isAdmin); //generate jwtToken
     return h.response({
       message: "sucessfully login",
       token: token

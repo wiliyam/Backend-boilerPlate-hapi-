@@ -1,12 +1,19 @@
 const user = require("../../../../../models/user");
 const Boom = require("boom");
+const ObjectId = require("mongodb").ObjectID;
 
 const handler = async (req, h) => {
-  const dataOnly = { name: 1, email: 1, dob: 1 };
-  const condition = { isAdmin: false };
-
-  const { isAdmin } = h.request.auth.credentials;
-  if (!isAdmin) return Boom.unauthorized("You dont have access to view data");
+  const { isAdmin, id } = h.request.auth.credentials; //get credentials
+  let condition;
+  const dataOnly = { name: 1, email: 1, dob: 1 }; //for projection
+  //if not admin then only show user data
+  if (!isAdmin) {
+    condition = { _id: ObjectId(id) };
+  }
+  //if admin then show all user data
+  else {
+    condition = {};
+  }
 
   try {
     const userData = await user.findAll(condition, dataOnly);
@@ -14,7 +21,7 @@ const handler = async (req, h) => {
     if (!userData) return Boom.badRequest("some thing went wrong");
     if (userData.length < 1)
       return h.response({ Message: "No user data found" });
-    return h.response({ user: userData });
+    return h.response({ users: userData });
   } catch (error) {
     return Boom.badImplementation(error);
   }

@@ -4,7 +4,7 @@ const joi = BaseJoi.extend(Extension);
 joi.objectId = require("joi-objectid")(joi);
 const user = require("../../../../../models/user");
 const Boom = require("boom");
-const objectId = require("mongodb").ObjectID;
+const ObjectId = require("mongodb").ObjectID;
 
 const payload = joi
   .object({
@@ -23,14 +23,15 @@ const payload = joi
   .required();
 
 const handler = async (req, h) => {
+  //data for update
   newdata = {
     name: req.payload.name,
     dob: req.payload.dob
   };
-  const { id } = h.request.auth.credentials;
-  const condition = { _id: objectId(id) };
+  const { id } = h.request.auth.credentials; //get credentials
+  const condition = { _id: ObjectId(id) };
   try {
-    const result = await user.update(condition, { $set: newdata });
+    const result = await user.update(condition, { $set: newdata }); //update user query
 
     if (result.result.n > 0)
       return h.response({ message: "successfully updated" });
@@ -38,38 +39,6 @@ const handler = async (req, h) => {
   } catch (error) {
     return Boom.badImplementation(error);
   }
-
-  // return new Promise((resolve, reject) => {
-  //   user
-  //     .findOne(condition)
-  //     .then(userData => {
-  //       if (!userData)
-  //         return resolve(Boom.badRequest("Email or Password invalid"));
-  //       bcrypt.compare(req.payload.password, userData.password, function(
-  //         err,
-  //         res
-  //       ) {
-  //         if (res) {
-  //           user
-  //             .findOneAndUpdate(condition, { $set: newdata })
-  //             .then(clientData => {
-  //               if (clientData.lastErrorObject.n != 0)
-  //                 return resolve({ message: "successfully updated" });
-  //               return resolve(
-  //                 Boom.badRequest(
-  //                   "Some thing went wrong check your email and password.."
-  //                 )
-  //               );
-  //             });
-  //         } else {
-  //           return resolve(Boom.badRequest("wrong email id and password"));
-  //         }
-  //       });
-  //     })
-  //     .catch(err => {
-  //       reject(Boom.badImplementation(err));
-  //     });
-  // });
 };
 
 module.exports = { payload, handler };

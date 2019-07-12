@@ -10,7 +10,7 @@ const payload = joi
     userId: joi
       .objectId()
       .required()
-      .description("Id of user ")
+      .description("Id of user ") //validate mongo object id
   })
   .required();
 const handler = async (req, h) => {
@@ -19,10 +19,10 @@ const handler = async (req, h) => {
   };
 
   const { isAdmin } = h.request.auth.credentials;
-  if (!isAdmin) return Boom.unauthorized("You dont have access to view data");
+  if (!isAdmin) return Boom.unauthorized("You dont have access to view data"); //check for administrative privileges
 
   try {
-    const result = await user.remove(condition);
+    const result = await user.remove(condition); //remove user query
     if (result.result.n > 0)
       return h.response({ message: "successfully deleted user" });
     return Boom.badRequest("some went wrong..");
