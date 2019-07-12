@@ -1,0 +1,8 @@
+{
+  "jwtPrivateKey": "unsecureKey",
+  "appUrl":"localhost:3000",
+  "dbMode":"prod",
+  "port": "3000",
+  "requiresAuth": true,
+  "dbUrl":"mongodb://localhost:27017"
+}
