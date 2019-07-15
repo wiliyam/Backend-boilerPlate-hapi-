@@ -14,7 +14,7 @@ exports.register = (server, options) => {
 
     config: {
       tags: ["api", entity],
-      description: "API is used for get user details",
+      description: "API is use for get user details",
       validate: {
         headers: validate.validateJwtHeader,
         payload: api.payload

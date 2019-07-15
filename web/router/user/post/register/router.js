@@ -14,7 +14,7 @@ exports.register = (server, options) => {
     config: {
       auth: false,
       tags: ["api", entity],
-      description: "API is used for register new user",
+      description: "API is use for register new user",
       validate: {
         payload: api.payload
       }

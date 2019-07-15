@@ -13,7 +13,7 @@ exports.register = (server, options) => {
     config: {
       auth: false,
       tags: ["api", entity],
-      description: "API is used for login user",
+      description: "API is use for login user",
       validate: {
         payload: api.payload
       }

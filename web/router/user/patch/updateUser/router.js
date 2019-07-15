@@ -13,7 +13,7 @@ exports.register = (server, options) => {
     vhost: "localhost",
     config: {
       tags: ["api", entity],
-      description: "API is used for Update user details",
+      description: "API is use for Update user details",
       validate: {
         headers: validate.validateJwtHeader,
         payload: api.payload

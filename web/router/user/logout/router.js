@@ -14,7 +14,7 @@ exports.register = (server, options) => {
 
     config: {
       tags: ["api", entity],
-      description: "API is used for logout user",
+      description: "API is use for logout user",
       validate: {
         headers: validate.validateJwtHeader
       }

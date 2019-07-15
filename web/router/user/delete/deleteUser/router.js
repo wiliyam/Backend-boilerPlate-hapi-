@@ -13,7 +13,7 @@ exports.register = (server, options) => {
     vhost: "localhost",
     config: {
       tags: ["api", entity],
-      description: "API is used for delete user by admin",
+      description: "API is use for delete user by admin",
       validate: {
         headers: validate.validateJwtHeader,
         payload: api.payload
