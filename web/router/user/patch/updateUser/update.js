@@ -24,14 +24,14 @@ const payload = joi
 
 const handler = async (req, h) => {
   //data for update
-  newdata = {
+  const newdata = {
     name: req.payload.name,
     dob: req.payload.dob
   };
   const { id } = h.request.auth.credentials; //get credentials
   const condition = { _id: ObjectId(id) };
   try {
-    const result = await user.update(condition, { $set: newdata }); //update user query
+    const result = await user.update(condition, newdata); //update user query
 
     if (result.result.n > 0)
       return h.response({ message: "successfully updated" });

@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const Boom = require("boom");
 
 const user = require("../../../../../models/user");
-const getToken = require("../../../../middleware/genAtuhToken");
+const generate = require("../../../../middleware/generate");
 
 const payload = joi.object({
   email: joi
@@ -28,7 +28,14 @@ const handler = async (req, h) => {
     if (!userData) return Boom.unauthorized("Wrong Email id");
     const res = await bcrypt.compare(req.payload.password, userData.password); //compare password
     if (!res) return Boom.unauthorized("Wrong password");
-    let token = getToken(userData._id, userData.email, userData.isAdmin); //generate jwtToken
+    let token = generate.genToken(
+      userData._id,
+      userData.email,
+      userData.isAdmin
+    ); //generate jwtToken
+    refreshToken = { refreshToken: token };
+    const result = await user.update(condition, refreshToken);
+    if (!result) return Boom.badRequest("something went wrong..");
     return h.response({
       message: "sucessfully login",
       token: token

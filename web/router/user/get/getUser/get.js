@@ -5,22 +5,29 @@ const ObjectId = require("mongodb").ObjectID;
 const handler = async (req, h) => {
   const { isAdmin, id } = h.request.auth.credentials; //get credentials
   let condition;
-  const dataOnly = { name: 1, email: 1, dob: 1 }; //for projection
+  let dataOnly; //for projection
+
+  //console.log("token", req.auth.token);
+
   //if not admin then only show user data
   if (!isAdmin) {
+    dataOnly = { name: 1, email: 1, dob: 1, _id: 0 };
     condition = { _id: ObjectId(id) };
   }
   //if admin then show all user data
   else {
-    condition = {};
+    dataOnly = { name: 1, email: 1, dob: 1 };
+    condition = { isAdmin: false };
   }
 
   try {
     const userData = await user.findAll(condition, dataOnly);
 
     if (!userData) return Boom.badRequest("some thing went wrong");
+
     if (userData.length < 1)
       return h.response({ Message: "No user data found" });
+
     return h.response({ users: userData });
   } catch (error) {
     return Boom.badImplementation(error);

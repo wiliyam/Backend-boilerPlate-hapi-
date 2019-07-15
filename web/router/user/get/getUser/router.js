@@ -1,5 +1,5 @@
 const api = require("./get");
-const joi = require("joi");
+const validate = require("../../../../middleware/validations");
 const entity = "user";
 exports.pkg = {
   name: "getUser"
@@ -16,15 +16,7 @@ exports.register = (server, options) => {
       tags: ["api", entity],
       description: "API is used for get all user list",
       validate: {
-        headers: joi
-          .object({
-            authorization: joi
-              .string()
-              .required()
-              .description("Put your Auth token here")
-          })
-          .unknown(),
-
+        headers: validate.validateJwtHeader,
         payload: api.payload
       }
     }

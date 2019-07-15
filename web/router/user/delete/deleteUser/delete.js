@@ -19,13 +19,13 @@ const handler = async (req, h) => {
   };
 
   const { isAdmin } = h.request.auth.credentials;
-  if (!isAdmin) return Boom.unauthorized("You dont have access to view data"); //check for administrative privileges
+  if (!isAdmin) return Boom.forbidden("You dont have access to Delete data"); //check for administrative privileges
 
   try {
     const result = await user.remove(condition); //remove user query
     if (result.result.n > 0)
       return h.response({ message: "successfully deleted user" });
-    return Boom.badRequest("some went wrong..");
+    return Boom.notFound("User not found..");
   } catch (error) {
     return Boom.badImplementation(error);
   }

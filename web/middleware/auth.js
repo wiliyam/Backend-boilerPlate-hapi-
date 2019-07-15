@@ -1,4 +1,4 @@
-const validate = require("./validate");
+const validate = require("./validations");
 const config = require("config");
 
 exports.register = async server => {
@@ -9,7 +9,7 @@ exports.register = async server => {
 
   server.auth.strategy("jwt2", "jwt", {
     key: JwtKey,
-    validate: validate,
+    validate: validate.validateJwt,
     verifyOptions: { algorithms: ["HS256"] }
   });
 

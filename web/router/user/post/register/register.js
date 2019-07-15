@@ -5,7 +5,7 @@ joi.objectId = require("joi-objectid")(joi);
 const Boom = require("boom");
 
 const user = require("../../../../../models/user");
-const getHash = require("../../../../middleware/genHashPass");
+const generate = require("../../../../middleware/generate");
 
 const payload = joi
   .object({
@@ -37,7 +37,12 @@ const payload = joi
       .utc()
       .format(["YYYY/MM/DD", "DD-MM-YYYY"])
       .default("01-01-2000")
-      .description("Enter Birth date here")
+      .description("Enter Birth date here"),
+    isAdmin: joi
+      .boolean()
+      .required()
+      .default("false")
+      .description("grand admin privilleges")
   })
   .required();
 
@@ -46,7 +51,7 @@ const handler = async (req, h) => {
     name: req.payload.userName,
     email: req.payload.email,
     dob: req.payload.dob,
-    isAdmin: false
+    isAdmin: req.payload.isAdmin
   };
   const checkCondition = {
     email: req.payload.email
@@ -56,7 +61,7 @@ const handler = async (req, h) => {
   try {
     const data = await user.findOne(checkCondition); //check if user already exist or not
     if (data) return Boom.conflict("user already exist");
-    const hashPass = await getHash(req.payload.password); //generate hash password
+    const hashPass = await generate.genHash(req.payload.password); //generate hash password
 
     userData["password"] = hashPass;
     const result = await user.addUser(userData); //addUser query

@@ -1,5 +1,5 @@
 const api = require("./delete");
-const joi = require("joi");
+const validate = require("../../../../middleware/validations");
 const entity = "user";
 exports.pkg = {
   name: "deleteUser"
@@ -13,16 +13,9 @@ exports.register = (server, options) => {
     vhost: "localhost",
     config: {
       tags: ["api", entity],
-      description: "API is used for delete user",
+      description: "API is used for delete user by admin",
       validate: {
-        headers: joi
-          .object({
-            authorization: joi
-              .string()
-              .required()
-              .description("Put your Auth token here")
-          })
-          .unknown(),
+        headers: validate.validateJwtHeader,
         payload: api.payload
       }
     }

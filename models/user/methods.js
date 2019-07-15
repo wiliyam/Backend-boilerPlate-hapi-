@@ -22,7 +22,7 @@ const update = async (condition, data) => {
   const result = await db
     .get()
     .collection(tablename)
-    .update(condition, data);
+    .update(condition, { $set: data });
   return result;
 };
 

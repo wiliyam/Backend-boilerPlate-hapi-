@@ -1,7 +1,10 @@
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const bcrypt = require("bcrypt");
 
-const getToken = (id, email, admin) => {
+const salt = Number(config.get("salt"));
+
+const genToken = (id, email, admin) => {
   let JwtKey = config.get("jwtPrivateKey");
 
   //console.log({ expiresIn: config.get("jwtExpireTime") });
@@ -17,4 +20,7 @@ const getToken = (id, email, admin) => {
   );
 };
 
-module.exports = getToken;
+const genHash = async password => {
+  return await bcrypt.hash(password, salt);
+};
+module.exports = { genToken, genHash };

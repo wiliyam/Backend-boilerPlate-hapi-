@@ -16,12 +16,12 @@ module.exports = {
       vision,
       middleware.swagger,
       middleware.auth,
-      router.admin.register,
       router.user.post.register,
       router.user.post.login,
       router.user.get.getUser,
       router.user.patch.updateUser,
-      router.user.del.deleteUser
+      router.user.del.deleteUser,
+      router.user.logout
     ]
   }
 };
