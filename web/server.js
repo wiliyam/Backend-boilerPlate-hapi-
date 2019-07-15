@@ -9,14 +9,19 @@ const options = {
 };
 
 let server;
+
+//method for start server
 exports.startServer = async function(mode) {
   try {
+    //compose server with glue
     server = await Glue.compose(
       manifest,
       options
     );
     await server.start();
     console.log(`sever running on ${manifest.server.port}`);
+
+    //connect database
     await Db.connectToServer(err => {
       if (err) return console.log(err);
       console.log("SuccessFully connected to database....");
@@ -26,6 +31,8 @@ exports.startServer = async function(mode) {
     process.exit(1);
   }
 };
+
+//method for stop server
 exports.stopServer = async function() {
   await server.stop();
 };

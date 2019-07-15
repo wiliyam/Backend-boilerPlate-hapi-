@@ -21,6 +21,7 @@ const url = config.get("dbUrl");
 var _db;
 
 module.exports = {
+  //method is use for connect db to server
   connectToServer: async function(callback, mode) {
     let err = null;
     try {
@@ -33,6 +34,7 @@ module.exports = {
     return callback(err);
   },
 
+  //export db instance
   get: function() {
     return _db;
   }

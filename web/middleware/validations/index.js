@@ -10,6 +10,9 @@ const validAccessToken = async (condition, token) => {
   if (userData.accessToken != token) return false;
   return true;
 };
+
+//method is used for verify refresh token
+
 const validRefreshToken = async (condition, token) => {
   const userData = await user.findOne(condition);
 
@@ -44,6 +47,7 @@ const validateJwt = async function(decoded, req, h) {
 };
 
 //for validate header if token is pass or not
+
 const validateJwtHeader = joi
   .object({
     authorization: joi
