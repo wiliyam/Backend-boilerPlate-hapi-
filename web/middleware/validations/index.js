@@ -7,7 +7,7 @@ const joi = require("joi");
 const validRefreshToken = async (condition, token) => {
   const userData = await user.findOne(condition);
 
-  if (userData.refreshToken != token) return false;
+  if (userData.accessToken != token) return false;
   return true;
 };
 

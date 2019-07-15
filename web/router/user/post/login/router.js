@@ -1,4 +1,4 @@
-const api = require("./login");
+const api = require("./post");
 const entity = "user";
 exports.pkg = {
   name: "login"

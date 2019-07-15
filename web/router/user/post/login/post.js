@@ -33,8 +33,8 @@ const handler = async (req, h) => {
       userData.email,
       userData.isAdmin
     ); //generate jwtToken
-    refreshToken = { refreshToken: token };
-    const result = await user.update(condition, refreshToken);
+    accessToken = { accessToken: token };
+    const result = await user.update(condition, accessToken);
     if (!result) return Boom.badRequest("something went wrong..");
     return h.response({
       message: "sucessfully login",

@@ -1,4 +1,4 @@
-const api = require("./logout");
+const api = require("./get");
 const validate = require("../../../middleware/validations");
 const entity = "user";
 exports.pkg = {

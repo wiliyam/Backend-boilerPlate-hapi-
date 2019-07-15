@@ -1,4 +1,4 @@
-const api = require("./register");
+const api = require("./post");
 
 const entity = "user";
 exports.pkg = {

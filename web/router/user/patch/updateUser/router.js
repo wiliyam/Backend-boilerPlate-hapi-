@@ -1,4 +1,4 @@
-const api = require("./update");
+const api = require("./patch");
 const validate = require("../../../../middleware/validations");
 const entity = "user";
 exports.pkg = {
