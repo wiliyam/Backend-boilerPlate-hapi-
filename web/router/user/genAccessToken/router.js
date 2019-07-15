@@ -1,22 +1,22 @@
 const api = require("./post");
-const validate = require("../../../middleware/validations");
 const entity = "user";
 exports.pkg = {
-  name: "logoutUser"
+  name: "genAccessToken"
 };
 
 exports.register = (server, options) => {
   server.route({
     method: "POST",
-    path: `/${entity}/logout`,
+    path: `/${entity}/genNewAccessToken`,
     handler: api.handler,
     vhost: "localhost",
 
     config: {
+      auth: false,
       tags: ["api", entity],
       description: "API is used for logout user",
       validate: {
-        headers: validate.validateJwtHeader
+        payload: api.payload
       }
     }
   });

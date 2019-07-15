@@ -4,10 +4,10 @@ const bcrypt = require("bcrypt");
 
 const salt = Number(config.get("salt"));
 
-const genToken = (id, email, admin) => {
+const genToken = (exDate, id, email, admin) => {
   let JwtKey = config.get("jwtPrivateKey");
 
-  //console.log({ expiresIn: config.get("jwtExpireTime") });
+  //console.log("exipatarion", ex);
 
   return jwt.sign(
     {
@@ -16,7 +16,7 @@ const genToken = (id, email, admin) => {
       isAdmin: admin
     },
     JwtKey,
-    { expiresIn: config.get("jwtExpireTime") }
+    { expiresIn: exDate }
   );
 };
 

@@ -21,6 +21,7 @@ module.exports = {
       router.user.get.getUser,
       router.user.patch.updateUser,
       router.user.del.deleteUser,
+      router.user.genAccessToken,
       router.user.logout
     ]
   }

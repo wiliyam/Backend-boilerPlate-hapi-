@@ -4,10 +4,16 @@ const joi = require("joi");
 
 //for validate refresh token
 
-const validRefreshToken = async (condition, token) => {
+const validAccessToken = async (condition, token) => {
   const userData = await user.findOne(condition);
 
   if (userData.accessToken != token) return false;
+  return true;
+};
+const validRefreshToken = async (condition, token) => {
+  const userData = await user.findOne(condition);
+
+  if (userData.refreshToken != token) return false;
   return true;
 };
 
@@ -18,9 +24,9 @@ const validateJwt = async function(decoded, req, h) {
 
   const condition = { _id: ObjectId(id) };
 
-  const valid = await validRefreshToken(condition, req.auth.token); //validate refresh token
+  const valid = await validAccessToken(condition, req.auth.token); //validate refresh token
 
-  if (!valid) return { isValid: false, errorMessage: "Token has been expired" };
+  if (!valid) return { isValid: false };
 
   try {
     userData = await user.findOne(condition);
@@ -47,4 +53,9 @@ const validateJwtHeader = joi
   })
   .unknown();
 
-module.exports = { validateJwt, validateJwtHeader, validRefreshToken };
+module.exports = {
+  validateJwt,
+  validateJwtHeader,
+  validAccessToken,
+  validRefreshToken
+};
