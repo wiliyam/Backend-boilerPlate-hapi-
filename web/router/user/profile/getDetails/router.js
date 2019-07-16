@@ -2,13 +2,13 @@ const api = require("./get");
 const validate = require("../../../../middleware/validations");
 const entity = "user";
 exports.pkg = {
-  name: "getUser"
+  name: "getDtails"
 };
 
 exports.register = (server, options) => {
   server.route({
     method: "GET",
-    path: `/${entity}/getUser`,
+    path: `/${entity}/getDtails`,
     handler: api.handler,
     vhost: "localhost",
 

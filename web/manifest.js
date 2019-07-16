@@ -18,13 +18,13 @@ module.exports = {
       vision,
       middleware.swagger,
       middleware.auth,
-      router.user.post.register,
-      router.user.post.login,
-      router.user.get.getUser,
-      router.user.patch.updateUser,
-      router.user.del.deleteUser,
-      router.user.genAccessToken,
-      router.user.logout
+      router.user.signUp,
+      router.user.signIn,
+      router.user.profile.getDetails,
+      router.user.profile.updateUser,
+      router.user.profile.deleteUser,
+      router.user.utility.genAccessToken,
+      router.user.signOut
     ]
   }
 };

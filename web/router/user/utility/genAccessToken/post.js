@@ -3,9 +3,9 @@ const joi = require("joi");
 const config = require("config");
 const jwt = require("jsonwebtoken");
 const Boom = require("boom");
-const generate = require("../../../middleware/generate");
-const validate = require("../../../middleware/validations");
-const user = require("../../../../models/user");
+const generate = require("../../../../middleware/generate");
+const validate = require("../../../../middleware/validations");
+const user = require("../../../../../models/user");
 
 const payload = joi.object({
   refreshToken: joi

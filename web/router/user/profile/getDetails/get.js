@@ -7,8 +7,6 @@ const handler = async (req, h) => {
   let condition;
   let dataOnly; //for projection
 
-  //console.log("token", req.auth.token);
-
   //if not admin then only show user data
   if (!isAdmin) {
     dataOnly = { name: 1, email: 1, dob: 1, _id: 0 };

@@ -4,8 +4,8 @@ const joi = BaseJoi.extend(Extension);
 joi.objectId = require("joi-objectid")(joi);
 const Boom = require("boom");
 
-const user = require("../../../../../models/user");
-const generate = require("../../../../middleware/generate");
+const user = require("../../../../models/user");
+const generate = require("../../../middleware/generate");
 
 const payload = joi
   .object({

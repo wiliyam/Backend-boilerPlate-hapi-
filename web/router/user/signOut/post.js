@@ -7,9 +7,6 @@ const handler = async (req, h) => {
   const { id } = h.request.auth.credentials; //get credentials
 
   const condition = { _id: ObjectId(id) };
-  const valid = await validate.validAccessToken(condition, req.auth.token); //validate refresh token
-
-  if (!valid) return Boom.unauthorized("Token expired...");
 
   const result = await user.update(condition, {
     accessToken: "",

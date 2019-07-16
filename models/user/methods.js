@@ -1,5 +1,4 @@
 const db = require("../../library/mongodb");
-
 const tablename = "user";
 
 //method is use for find user from db
@@ -30,6 +29,10 @@ const update = async (condition, data) => {
 };
 
 //method is use for remove user from db
+/**
+ *
+ * @param {*} condition
+ */
 const remove = async condition => {
   const result = await db
     .get()
@@ -39,6 +42,11 @@ const remove = async condition => {
   return result;
 };
 
+/**
+ *
+ * @param {*} condition
+ * @param {*} projection
+ */
 const findAll = async (condition, projection) => {
   const userData = await db
     .get()

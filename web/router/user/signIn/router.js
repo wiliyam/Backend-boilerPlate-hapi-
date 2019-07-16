@@ -1,13 +1,13 @@
 const api = require("./post");
 const entity = "user";
 exports.pkg = {
-  name: "login"
+  name: "signIn"
 };
 
 exports.register = (server, options) => {
   server.route({
     method: "POST",
-    path: `/${entity}/login`,
+    path: `/${entity}/signIn`,
     handler: api.handler,
     vhost: "localhost",
     config: {

@@ -4,8 +4,8 @@ const bcrypt = require("bcrypt");
 const Boom = require("boom");
 const config = require("config");
 
-const user = require("../../../../../models/user");
-const generate = require("../../../../middleware/generate");
+const user = require("../../../../models/user");
+const generate = require("../../../middleware/generate");
 
 const payload = joi.object({
   email: joi

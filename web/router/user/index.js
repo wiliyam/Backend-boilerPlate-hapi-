@@ -1,8 +1,7 @@
-const post = require("./post");
-const patch = require("./patch");
-const get = require("./get");
-const logout = require("./logout");
-const del = require("./delete");
-const genAccessToken = require("./genAccessToken");
+const signOut = require("./signOut");
+const signIn = require("./signIn");
+const signUp = require("./signUp");
+const profile = require("./profile");
+const utility = require("./utility");
 
-module.exports = { post, patch, get, del, genAccessToken, logout };
+module.exports = { signIn, signUp, profile, utility, signOut };
