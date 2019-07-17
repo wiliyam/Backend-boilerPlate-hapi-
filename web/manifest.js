@@ -23,6 +23,7 @@ module.exports = {
       router.user.profile.getDetails,
       router.user.profile.updateUser,
       router.user.profile.deleteUser,
+      router.user.profile.uploadImage,
       router.user.utility.genAccessToken,
       router.user.signOut
     ]
