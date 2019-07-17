@@ -9,13 +9,12 @@
 #     - run:
 #         name: Install all packages-npm
 #         command: 'npm install'
- 
+
 #     - run:
 #         name: Run tests and generate coverage
 #         command: 'npm test'
 
-
- version: 1
+version: 1
 jobs:
   build:
     docker:
