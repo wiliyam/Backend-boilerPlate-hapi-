@@ -3,64 +3,55 @@ const chai = require("chai");
 const { expect } = require("chai");
 const chaiHttp = require("chai-http");
 chai.use(chaiHttp);
-const jwt = require("jsonwebtoken");
 const config = require("config");
-
+const generate = require("../../web/middleware/generate");
+const user = require("../../models/user");
 const baseUrl = "http://localhost:3000";
 
-function getToken(email, admin) {
-  let JwtKey = config.get("jwtPrivateKey");
+let id, accessToken;
+const genrateToken = async () => {
+  const userData = await user.findOne({ email: "user@app.com" });
+  const exDate = Number(config.get("jwtExpireTime"));
+  accessToken = generate.genToken(
+    exDate,
+    userData._id,
+    userData.email,
+    userData.isAdmin
+  ); //generate jwtToken
 
-  return jwt.sign(
-    {
-      email: email,
-      isAdmin: admin
-    },
-    JwtKey,
-    { expiresIn: "1h" }
+  id = userData._id;
+
+  let refreshToken = generate.genToken(
+    exDate + 3600,
+    userData._id,
+    userData.email,
+    userData.isAdmin
   );
-}
-let email = "user@app.com";
-let admin = true;
-let token = getToken(email, admin);
+  let tokens = { accessToken, refreshToken }; //store new token in database
+  const result = await user.update({ email: "user@app.com" }, tokens);
+};
 
 describe("user DELETE method ", () => {
   it("should return 401 when user is unauthenticate", done => {
+    genrateToken();
     chai
       .request(baseUrl)
       .delete("/user/deleteUser")
       .set("content-type", "application/json")
-      .field("email", "user@app.com")
-      .field("password", "test")
+      .field("userId", `${id}`)
       .end((err, res) => {
         expect(res).to.have.status(401);
         expect(res.body).to.have.property("message");
         done();
       });
   });
-  it("should return 400 when user enter invalid email or password", done => {
-    chai
-      .request(baseUrl)
-      .delete("/user/deleteUser")
-      .set("content-type", "application/json")
-      .set("Authorization", token)
-      .field("email", "user1222@app.com")
-      .field("password", "test1223")
-      .end((err, res) => {
-        expect(res).to.have.status(400);
-        expect(res.body).to.have.property("message");
-        done();
-      });
-  });
-
   it("should return 200 when user is deleted with valid token", done => {
     chai
       .request(baseUrl)
       .delete("/user/deleteUser")
       .set("content-type", "application/json")
-      .set("Authorization", token)
-      .field("email", "user@app.com")
-      .field("password", "test")
+      .set("Authorization", accessToken)
+      .field("userId", `${id}`)
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.have.property("message");

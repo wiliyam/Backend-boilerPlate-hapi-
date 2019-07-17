@@ -6,11 +6,11 @@ chai.use(chaiHttp);
 
 const baseUrl = "http://localhost:3000";
 
-describe("user POST method for Registration", () => {
+describe("user SIGNIN method for Registration", () => {
   it("should return 401 when user not exist", done => {
     chai
       .request(baseUrl)
-      .post("/user/login")
+      .post("/user/signIn")
       .set("content-type", "application/json")
       .field("email", "user234")
       .field("password", "test1223")
@@ -20,10 +20,10 @@ describe("user POST method for Registration", () => {
         done();
       });
   });
-  it("should return 401 when wrong Email or password entered", done => {
+  it("should return 401 when user entered wrong password ", done => {
     chai
       .request(baseUrl)
-      .post("/user/login")
+      .post("/user/signIn")
       .set("content-type", "application/json")
       .field("email", "user@app.com")
       .field("password", "test1223")
@@ -37,14 +37,14 @@ describe("user POST method for Registration", () => {
   it("should return 200 when user login successfully", done => {
     chai
       .request(baseUrl)
-      .post("/user/login")
+      .post("/user/signIn")
       .set("content-type", "application/json")
       .field("email", "user@app.com")
       .field("password", "test")
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.have.property("message");
-        expect(res.body).to.have.property("token");
+        expect(res.body).to.have.property("tokens");
         done();
       });
   });

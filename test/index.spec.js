@@ -12,7 +12,7 @@ before(async () => {
 });
 
 describe("Server Check", async () => {
-  it("should get user - 404", done => {
+  it("should - return 404  check server", done => {
     chai
       .request(baseUrl)
       .get("/")
