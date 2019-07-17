@@ -22,5 +22,3 @@ if (cluster.isMaster) {
   const server = require("./server");
   server.startServer();
 }
-
-//scscsdc
