@@ -5,7 +5,7 @@ jobs:
       — image: circleci/node:10.16.0-stretch
     working_directory: ~/repo
     steps:
-      — checkout
+      —checkout
     - run:
         name: Install all packages-npm
         command: 'npm install'
