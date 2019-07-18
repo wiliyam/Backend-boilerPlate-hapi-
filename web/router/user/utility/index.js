@@ -1,3 +1,3 @@
 const genAccessToken = require("./genAccessToken");
 
-module.exports = { genAccessToken };
+module.exports = [].concat(genAccessToken);

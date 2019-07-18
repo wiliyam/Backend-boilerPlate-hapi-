@@ -12,20 +12,6 @@ module.exports = {
     port: config.get("port")
   },
   register: {
-    plugins: [
-      middleware.good,
-      inert,
-      vision,
-      middleware.swagger,
-      middleware.auth,
-      router.user.signUp,
-      router.user.signIn,
-      router.user.profile.getDetails,
-      router.user.profile.updateUser,
-      router.user.profile.deleteUser,
-      router.user.profile.uploadImage,
-      router.user.utility.genAccessToken,
-      router.user.signOut
-    ]
+    plugins: [inert, vision].concat(middleware, router)
   }
 };
