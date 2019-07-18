@@ -28,8 +28,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      #wait for mongo connection
-      - run: wait-for-it -h 127.0.0.1 -p 27017 -t 60
 
       # run tests!
       - run: npm test
