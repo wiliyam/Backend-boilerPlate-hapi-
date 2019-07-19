@@ -17,7 +17,7 @@ const server = http.createServer(async (req, res) => {
 
   
   try {
-    await sendMail('vivekpatel169@gmail.com','vivekpatel169@gmail.com','test mail','hello from server')
+   
     const conn = await amqp.connect(CONN_URL);
     ch = await conn.createChannel();
   
@@ -26,8 +26,8 @@ const server = http.createServer(async (req, res) => {
       async msg => {
         mailid= JSON.parse(msg.content.toString());
         console.log(mailid);
+        await sendMail('vivekpatel169@gmail.com','vivekpatel169@gmail.com','test mail','hello from server')
         
-  
         ch.ack(msg); //send ack when data is read
       },
       { noAck: false } //when true no need to send ack
