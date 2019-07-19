@@ -30,4 +30,13 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm test
+      - run:
+          npm test
+          # Save artifacts
+      - store_artifacts:
+          path: /tmp/artifacts
+          destination: build
+
+      # Upload test results
+      - store_test_results:
+          path: /tmp/test-reports
