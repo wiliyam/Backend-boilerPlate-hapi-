@@ -1,6 +1,6 @@
-var api_key = "9d5b89a12ff8ce00de48b43b2698b993-fd0269a6-6162d2ee";
+var api_key = ""
 var domain =
-  "sandbox1102e655ecf44c6eaa90dd8880bf1c59.mailgun.org";
+  ""
 var mg = require("mailgun-js")({ apiKey: api_key, domain: domain });
 
 

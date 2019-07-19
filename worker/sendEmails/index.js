@@ -20,7 +20,7 @@ const server = http.createServer(async (req, res) => {
    
     const conn = await amqp.connect(CONN_URL);
     ch = await conn.createChannel();
-  
+    ch.prefetch(1)
     ch.consume(
       "user-email",
       async msg => {

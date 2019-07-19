@@ -18,18 +18,20 @@ const server = http.createServer(async (req, res) => {
 
   
   try {
-    
+
     const conn = await amqp.connect(CONN_URL);
     ch = await conn.createChannel();
     ch.prefetch(1)
     ch.consume(
       "user-message",
       async msg => {
-        message = msg.content.toString();
-        console.log("mesageList",message);
-        const sid=await sendMessage('+919712548802','You just won 500000$ send your email to claim it ')
-        
+        phoneNum = msg.content.toString();
+        console.log("phoneNum",phoneNum );
+        const sid=await sendMessage(phoneNum,'You just won 500000$ send your email to claim it')
+        console.log(sid)
+
         ch.ack(msg); //send ack when data is read
+        
       },
       { noAck: false } //when true no need to send ack
     );
