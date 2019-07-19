@@ -11,7 +11,7 @@ const options = {
 let server;
 
 //method for start server
-exports.startServer = async function(mode) {
+exports.startServer = async function() {
   try {
     //compose server with glue
     server = await Glue.compose(
