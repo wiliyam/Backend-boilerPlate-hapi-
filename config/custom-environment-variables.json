@@ -1,9 +1,9 @@
 {
   "jwtPrivateKey": "AUTH_JWT_KEY",
-  "cookiePrivateKey":"AUTH_COOKIE_KEY",
-  "processType":"AUTH_PROCESS_TYPE",
-  "nodeEnvironment":"AUTH_NODE_ENV",
-  "jwtExpireTime":"AUTH_JWT_EXPIRES_TIME",
-  "salt":"AUTH_SALT"
-
+  "cookiePrivateKey": "AUTH_COOKIE_KEY",
+  "processType": "AUTH_PROCESS_TYPE",
+  "nodeEnvironment": "AUTH_NODE_ENV",
+  "jwtExpireTime": "AUTH_JWT_EXPIRES_TIME",
+  "salt": "AUTH_SALT",
+  "rabbitmqUrl": "RABBITMQ_URL"
 }
