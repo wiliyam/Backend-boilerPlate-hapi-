@@ -34,7 +34,7 @@ jobs:
           npm test
           # Save artifacts
       - store_artifacts:
-          path: /tmp/artifacts
+          path: /.nyc_output
           destination: build
 
       # Upload test results
