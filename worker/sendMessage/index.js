@@ -17,9 +17,7 @@ const server = http.createServer(async (req, res) => {
   res.write("server for sending message from rabbit mq...");
   console.log("server for sending message from rabbit mq...")
 
-  
   try {
-
     const conn = await amqp.connect(CONN_URL);
     ch = await conn.createChannel();
 
@@ -29,15 +27,13 @@ const server = http.createServer(async (req, res) => {
         phoneNum = msg.content.toString();
         console.log("phoneNum",phoneNum );
         try {
-            const sid=await sendMessage(phoneNum,'You just won 500000$ send your email to claim it')
+            const sid=await sendMessage('+919898494194','You just won 500000$ send your email to claim it')
             console.log(sid)
             ch.ack(msg); //send ack when data is read
         } catch (error) {
             console.log(error)
         }
-           
-        
-      },
+      }
     );
   } catch (error) {
     console.log(error)

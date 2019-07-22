@@ -25,15 +25,15 @@ const server = http.createServer(async (req, res) => {
     ch.consume(
       "user-email",
       async msg => {
-        mailid= JSON.parse(msg.content.toString());
+        mailid= msg.content.toString()
         console.log(mailid);
         try {
-          await sendMail('vivekpatel169@gmail.com','vivekpatel169@gmail.com','test mail','hello from server')
+          await sendMail('wiliyambhadani@gmail.com','wiliyambhadani@gmail.com','test mail','hello from server')
         
           ch.ack(msg); //send ack when data is read
           
         } catch (error) {
-          console.log(error)
+          console.error("error from mail gun",error)
         }
 
       },

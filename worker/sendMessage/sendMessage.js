@@ -9,19 +9,35 @@ const client = new twilio(accountSid, authToken);
 
 
 
-module.exports=(receiver,msg)=>{
-    return client.messages.create({
+const sendMessage=(receiver,msg)=>{
+
+    console.log('receiverType',typeof(receiver))
+    console.log('receiver',receiver);
+    return  client.messages.create({
         body: msg,
-        to: receiver,  // Text this number
+        to:'+919898494194',  // Text this number
         from:'+16313434022' // From a valid Twilio number
     })
 }
 
+module.exports=sendMessage
+
+
+// const run=async()=>{
+//     sid=await sendMessage('+919898494194','hello ....')
+//     console.log(sid)
+// }
+
+// run()
+
 // client.messages.create({
-//     body: 'sample msag',
+//     body: 'sample massage',
 //     to: '+919898494194',  // Text this number
 //     from:'+16313434022' // From a valid Twilio number
 // }).then(res=>{
 //     console.log(res)
+// }).catch(err=>{
+//     console.error(err)
 // })
+
 
