@@ -14,23 +14,30 @@ process.on("exit", code => {
 
 const server = http.createServer(async (req, res) => {
   res.write("server for sending email from rabbit mq...");
+  console.log("server for sending email from rabbit mq...")
 
   
   try {
    
     const conn = await amqp.connect(CONN_URL);
     ch = await conn.createChannel();
-    ch.prefetch(1)
+
     ch.consume(
       "user-email",
       async msg => {
         mailid= JSON.parse(msg.content.toString());
         console.log(mailid);
-        await sendMail('vivekpatel169@gmail.com','vivekpatel169@gmail.com','test mail','hello from server')
+        try {
+          await sendMail('vivekpatel169@gmail.com','vivekpatel169@gmail.com','test mail','hello from server')
         
-        ch.ack(msg); //send ack when data is read
+          ch.ack(msg); //send ack when data is read
+          
+        } catch (error) {
+          console.log(error)
+        }
+
       },
-      { noAck: false } //when true no need to send ack
+      
     );
   } catch (error) {
     console.log(error)

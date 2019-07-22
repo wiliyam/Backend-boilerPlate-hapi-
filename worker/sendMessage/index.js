@@ -15,25 +15,29 @@ process.on("exit", code => {
 
 const server = http.createServer(async (req, res) => {
   res.write("server for sending message from rabbit mq...");
+  console.log("server for sending message from rabbit mq...")
 
   
   try {
 
     const conn = await amqp.connect(CONN_URL);
     ch = await conn.createChannel();
-    ch.prefetch(1)
+
     ch.consume(
       "user-message",
       async msg => {
         phoneNum = msg.content.toString();
         console.log("phoneNum",phoneNum );
-        const sid=await sendMessage(phoneNum,'You just won 500000$ send your email to claim it')
-        console.log(sid)
-
-        ch.ack(msg); //send ack when data is read
+        try {
+            const sid=await sendMessage(phoneNum,'You just won 500000$ send your email to claim it')
+            console.log(sid)
+            ch.ack(msg); //send ack when data is read
+        } catch (error) {
+            console.log(error)
+        }
+           
         
       },
-      { noAck: false } //when true no need to send ack
     );
   } catch (error) {
     console.log(error)

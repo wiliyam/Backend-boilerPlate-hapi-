@@ -38,6 +38,7 @@
     "mongodb": "^3.2.7",
     "semver": "^6.2.0",
     "twilio": "^3.33.1",
+    "web-push": "^3.3.5",
     "winston": "^3.2.1"
   },
   "engines": {

@@ -8,23 +8,20 @@ const client = new twilio(accountSid, authToken);
 
 
 
+
 module.exports=(receiver,msg)=>{
-    return new Promise((res,rej)=>{
-        client.messages.create({
-            body: msg,
-            to: receiver,  // Text this number
-            from:'+16313434022' // From a valid Twilio number
-        }).then(result=>{
-            res(result)
-        }).catch(err=>{
-            rej(err)
-        })
-    }) 
+    return client.messages.create({
+        body: msg,
+        to: receiver,  // Text this number
+        from:'+16313434022' // From a valid Twilio number
+    })
 }
 
 // client.messages.create({
 //     body: 'sample msag',
 //     to: '+919898494194',  // Text this number
 //     from:'+16313434022' // From a valid Twilio number
+// }).then(res=>{
+//     console.log(res)
 // })
 
