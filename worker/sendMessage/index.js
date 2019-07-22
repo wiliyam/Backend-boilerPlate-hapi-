@@ -39,7 +39,6 @@ const server = http.createServer(async (req, res) => {
     console.log(error)
   }
 
-  res.write("done");
   res.end();
 });
 
