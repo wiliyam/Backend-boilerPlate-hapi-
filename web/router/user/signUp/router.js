@@ -1,4 +1,5 @@
 const api = require("./post");
+const Joi=require('joi')
 
 const entity = "user";
 exports.pkg = {
@@ -16,6 +17,9 @@ exports.register = (server, options) => {
       tags: ["api", entity],
       description: "API is use for register new user",
       validate: {
+        headers:Joi.object({
+          'language': Joi.string().required().description('en - English').error(new Error('Language is incorrect')).required(),
+      }).unknown(),
         payload: api.payload
       }
     }

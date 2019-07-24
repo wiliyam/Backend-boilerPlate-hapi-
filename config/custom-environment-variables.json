@@ -5,5 +5,9 @@
   "nodeEnvironment": "AUTH_NODE_ENV",
   "jwtExpireTime": "AUTH_JWT_EXPIRES_TIME",
   "salt": "AUTH_SALT",
-  "rabbitmqUrl": "RABBITMQ_URL"
+  "rabbitmqUrl": "RABBITMQ_URL",
+  "localization": {
+    "defaultlanguage": "DEFAULT_LANGUAGE",
+    "language": "LANGUAGES"
+  }
 }

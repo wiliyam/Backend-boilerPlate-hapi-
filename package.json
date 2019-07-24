@@ -36,6 +36,7 @@
     "jsonwebtoken": "^8.5.1",
     "mailgun-js": "^0.22.0",
     "mongodb": "^3.2.7",
+    "redis": "^2.8.0",
     "semver": "^6.2.0",
     "twilio": "^3.33.1",
     "web-push": "^3.3.5",

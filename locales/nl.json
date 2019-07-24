@@ -1,0 +1,712 @@
+{
+  "genericErrMsg": {
+    "200": "Success.",
+    "400": "Verplichte velden onbreken.",
+    "401": "uw profiel is niet geverifieerd,  neem alstublieft  neem astublieft contact op met onze helpdesk voor meer vragen.",
+    "402": "Verplichte velden onbreken.",
+    "404": "Er is een fout opgetreden. Log astublieft uit en probeer opnieuw.",
+    "440": "Verlopen token.",
+    "498": "Ongeldige token.",
+    "500": "Interne server fout.",
+    "501": "Invoeg fout"
+  },
+  "estimateDelivery": {
+    "402": "Gebied komt niet overeen ",
+    "403": "De stad komt niet overeen, kan niet naar een andere stad bezorgen"
+  },
+  "stripeCardPost": {
+    "200": "Kaart is successvol  toegevoegd."
+  },
+  "stripeCardPatch": {
+    "200": "Kaat is successvol toegevoegt aan de standaardbron.",
+    "400": "Kaart of de gebruiker is niet gevonden."
+  },
+  "stripeCardDelete": {
+    "200": "Kaart is successvol verwijdert .",
+    "400": "Kaart of de gebruiker is niet gevonden."
+  },
+  "stripeConnectAccountGet": {
+    "400": "Geen stipe-account, maakt astublieft een nieuwe stipe-account aan"
+  },
+  "stripeConnectAccountPost": {
+    "400": "Geen stipe-account, maakt astublieft een nieuwe stipe-account aan"
+  },
+  "stripeExternalAccountPost": {
+    "400": "Geen stipe-account, maakt astublieft een nieuwe stipe-account aan"
+  },
+  "stripeExternalAccountDelete": {
+    "200": "Externe account is successvol verwijderd.",
+    "400": "Externe account van connecy account is niet gevonden."
+  },
+  "stripeExternalAccountPatch": {
+    "200": "Externe account is successvol toegevoegd aan de standaardbron.",
+    "400": "Externe account van connecy account is niet gevonden."
+  },
+  "stripePlanPost": {
+    "200": "Plan is successvol toegevoegd."
+  },
+  "stripePlanPatch": {
+    "200": "Plan is successvol bijgewerkt.",
+    "400": "Plan niet gevonden ."
+  },
+  "stripePlanDelete": {
+    "200": "Plan niet gevonden .",
+    "400": "Plan niet gevonden ."
+  },
+  "stripeSubscribePost": {
+    "200": "abonnement is successvol toegevoegd.",
+    "208": " U bent al geabonneerd aan het zelfde plan.",
+    "400": "Klant niet gevonden .",
+    "401": "Kaarten niet gevonden .",
+    "402": "Plan niet gevonden ."
+  },
+  "stripeSubscribeGet": {
+    "200": "Success.",
+    "400": "Klant niet gevonden .",
+    "401": "Abonnement is niet gevonden ."
+  },
+  "stripeSubscribePatch": {
+    "200": "Abonnement is successvol bijgewerkt.",
+    "400": "Klant niet gevonden .",
+    "401": "Kaarten niet gevonden .",
+    "402": "Plan niet gevonden ."
+  },
+  "stripeSubscribeDelete": {
+    "200": "Subscription deleted successfully.",
+    "400": "Abonnement is niet gevonden .",
+    "401": "Klant niet gevonden ."
+  },
+  "stripeTransaction": {
+    "customeNotFound": "Klant niet gevonden .",
+    "authoriseSuccess": "Betaling is successvol afgerond.",
+    "refundChargeSuccess": "Betaling is successvol geannuleerd .",
+    "captureChargeSuccess": "Betaling is successvol ontvangen.",
+    "chargeSuccess": "Betalings success.",
+    "accountNotFound": "Account niet gevonden .",
+    "transferSuccess": "Overdracht geslaagd"
+  },
+  "stripeErr": {
+    "rateLimit": "Te veel verzoeken gedaan naar de API.",
+    "invalidParams": "Ongeldige parameters geleverd.",
+    "apiErr": "Er is een interne fout opgetreden in stripe's API  .",
+    "connectionErr": "Een soort van fout is opgetreden tijdens de HTTPS communicatie .",
+    "authErr": "U heeft waarschijnlijk een foute API toets gebruikt.",
+    "defaultErr": " Plotselinge fout "
+  },
+  "apiDescription": {
+    "stripeCardPost": "Met deze API kan de gebruiker een nieuwe kaarten op de streep toevoegen.",
+    "stripeCardGet": "Met deze API kan de gebruiker alle toegevoegde kaarten krijgen.",
+    "stripeCardPatch": "Met deze API kan de gebruiker de standaar kaart verwerken.",
+    "stripeCardDelete": "Met deze API kan de gerbuiker een toegevoegde kaart verwijderen .",
+    "stripeConnectAccountGet": "Met deze API kan de gebruiker accountgegevens van de stripe-connectie krijgen.",
+    "stripeConnectAccountPost": "Met deze API kan de gebruiker een stripe connect-account maken of bijwerken.",
+    "stripeExternalAccountPost": "Met deze API kan de gebruiker een nieuwe bank op stripe toevoegen.",
+    "stripeExternalAccountPatch": "Met deze API kan de gebruiker de standaard bank veranderen.",
+    "stripeExternalAccountDelete": "Met deze API kan de gebruiker een toegevoegde bank verwijderen .",
+    "stripePlanPost": "Met deze API kan de beheerder nieuw abonnement op de Stripe toevoegen..",
+    "stripePlanGet": "Met deze API kan de gebruiker alle toegevoegde abonnoment plannen krijgen.",
+    "stripePlanPatch": "Met deze API kan de beheerder plan gegevens wijzigen .",
+    "stripePlanDelete": "Met deze API kan de beheerder toegevoegde plannen verwijderen.",
+    "stripeSubscribePost": "Met deze API kan de gebruiker zich abonneren op het plan Stripe.",
+    "stripeSubscribeGet": "Met deze API kan de gebruiker abonnoment gegevens krijgen.",
+    "stripeSubscribePatch": "Met deze API kan de gerbuiker abonnoment gegevens wijzigen .",
+    "stripeSubscribeDelete": "Deze API kan stripe abonomenten verwijderen"
+  },
+  "postSignUp": {
+    "200": "Success.",
+    "412": "Dit email adres is al in gebruikt, probeer een andere email alstublieft.",
+    "413": "Dit mobile nummer is al in gebruik bij ons, probeer astublieft een ander nummer "
+  },
+  "getProfile": {
+    "200": "Success.",
+    "204": "Gebruiker niet gevonden ",
+    "404": "Data niet gevonden"
+  },
+  "getData": {
+    "200": "Success.",
+    "404": "Data niet gevonden"
+  },
+  "appVersions": {
+    "200": "Success.",
+    "400": "Update alstublieft uw app naar de laatste versie .",
+    "404": "Data niet gevonden"
+  },
+  "guestRegisterUser": {
+    "200": "Success.",
+    "400": "Slecht verzoek"
+  },
+  "getCityErrMsg": {
+    "200": "Success.",
+    "404": "Geen stad gevonden "
+  },
+  "emails": {
+    "200": "Email is successvol verzonden .",
+    "400": "Gebruiker niet gevonden "
+  },
+  "postPhoneValidation": {
+    "200": "Success.",
+    "400": "Slecht verzoek",
+    "404": "Not found",
+    "406": "Mobile nummer is niet geldig",
+    "412": "Dit mobile nummer is al in gebruik bij ons, probeer astublieft een ander nummer ",
+    "413": "Dit email adres is al in gebruikt, probeer een andere email alstublieft."
+  },
+  "postEmailValidation": {
+    "200": "Success.",
+    "412": "Dit email address is al in gerbuik bij ons, probeer alstublieft een ander."
+  },
+  "getServiceCategory": {
+    "200": "Heb de categoriegegevens.",
+    "404": "Geen categoriegegevens gevonden"
+  },
+  "postVerifyPhoneNumber": {
+    "200": "Bedankt voor het registreeren. Een van onze vertegenwoordigers neemt binnen 24 uur contact met u op om uw profiel in te stellen en alle benodigde documenten te ontvangen.",
+    "410": "ongeldige vereficatie code, probeer alstublieft opnieuw "
+  },
+  "postSignIn": {
+    "200": "Login successvol",
+    "400": "Telefoon nummer of email is fout.",
+    "401": "Incorrect wachtwoord, probeer opnieuw.",
+    "403": "Uw profiel is afgewezen bij ons operatie team. Neem contact op met ons ondersteuningsteam voor meer informatie.",
+    "405": "Bedankt voor het registreeren. Een van onze vertegenwoordigers neemt binnen 24 uur contact met u op om uw profiel in te stellen en alle benodigde documenten te ontvangen.",
+    "406": "Uw profiel is verwijderd bij ons operatie team. Neem contact op met ons ondersteuningsteam voor meer informatie"
+  },
+  "newAccount": {
+    "406": "Bedankt voor het registreeren. Een van onze vertegenwoordigers neemt binnen 24 uur contact met u op om uw profiel in te stellen en alle benodigde documenten te ontvangen."
+  },
+  "bannedAccount": {
+    "406": "Uw profiel is verwijderd bij ons operatie team. Neem contact op met ons ondersteuningsteam voor meer informatie"
+  },
+  "deactivatedAccount": {
+    "406": "Uw account is gedeactiveerd. Mail ons op support@loopz.today voor meer informatie"
+  },
+  "rejectedAccount": {
+    "406": "Uw profiel is afgewezen bij ons operatie team.."
+  },
+  "patchProfile": {
+    "200": "Successvol geupdate .",
+    "400": "controleer alstublieft het invoerveld"
+  },
+  "patchStatus": {
+    "200": "Successvol geupdate ."
+  },
+  "patchLocation": {
+    "200": "Successvol geupdate .."
+  },
+  "patchPassword": {
+    "200": "Successvol geupdate ..",
+    "401": "Incorrect wachtwoord"
+  },
+  "postResendOtp": {
+    "200": "Verificatie code is naar uw geregistreerde nummer gestuurd",
+    "404": "Data niet gevonden.",
+    "429": "Je hebt het quotum voor verificatiepogingen opgebruikt. Probeer het na 24 uur opnieuw"
+  },
+  "slaveRegisterUser": {
+    "200": "Success",
+    "400": "Slecht verzoek"
+  },
+  "slaveVerifyPhoneNumber": {
+    "200": "Telefoon nummer is geverifieerd",
+    "400": "Verificatie code is fout.",
+    "401": "Dit mobile nummner is al geverifeerd, probber alstublieft een ander.",
+    "404": "Data niet gevonden.",
+    "410": "Verificatie code is verlopen, maak een nieuwe aan door op de knop Opnieuw verzenden te klikken.",
+    "429": "Je hebt het quotum voor verificatiepogingen opgebruikt. Probeer het na 24 uur opnieuw"
+  },
+  "slaveResendOtp": {
+    "200": "Verificatie code is naar uw geregistreerde nummer gestuurd",
+    "404": "Data niet gevonden.",
+    "429": "Je hebt het quotum voor verificatiepogingen opgebruikt. Probeer het na 24 uur opnieuw"
+  },
+  "slaveEmailValidation": {
+    "200": "Success.",
+    "412": "Dit email address is al in gerbuik bij ons, probeer alstublieft een ander.",
+    "413": "Dit email adres is al in gebruikt, probeer een andere email alstublieft."
+  },
+  "slavePhoneValidation": {
+    "200": "Success.",
+    "400": "Slecht verzoek",
+    "406": "Telefoonnummer is niet geldig ",
+    "412": "Dit mobile nummer is al in gebruik bij ons, probeer astublieft een ander nummer "
+  },
+  "slavePassword": {
+    "200": "Successvol geupdate ..",
+    "401": "Verkeerd wachtwoord! Probeer opnieuw of druk vergeet wachtwoord om het te ressetten ."
+  },
+  "customerUpdatePassword": {
+    "200": "Successvol geupdate ..",
+    "401": "code is niet geverifieerd.",
+    "402": "U bent niet geautoriseerd om het wachtwoord te wijzigen.",
+    "440": "ongeldige vereficatie code, probeer alstublieft opnieuw "
+  },
+  "driverUpdatePassword": {
+    "200": "Successvol geupdate ..",
+    "401": "code is niet geverifieerd.",
+    "402": "U bent niet geautoriseerd om het wachtwoord te wijzigen.",
+    "440": "ongeldige vereficatie code, probeer alstublieft opnieuw "
+  },
+  "slaveProfile": {
+    "200": "Success.",
+    "404": "Niet gevonden"
+  },
+  "slaveUpdateProfile": {
+    "200": "Successvol geupdate ..",
+    "400": "Slecht verzoek"
+  },
+  "slaveGetService": {
+    "200": "Successvol geupdate ..",
+    "400": "Slecht verzoek"
+  },
+  "slaveSignIn": {
+    "200": "Login successvol..",
+    "400": "Slecht verzoek",
+    "401": "Incorrect wachtwoord, probeer opnieuw.",
+    "402": "Mobile niet geverifieerd",
+    "403": "Neem contact op met ons ondersteuningsteam voor meer informatie",
+    "404": "Gebruiker niet gevonden ",
+    "405": "Uw account is niet geactiveerd, activeer uw account alstublieft .",
+    "406": "Email of telefoon nummer is incorrect.",
+    "407": "Uw profiel is verwijderd bij ons operatie team. Neem contact op met ons ondersteuningsteam voor meer informatie",
+    "415": "Uw profiel is verwijderd bij ons operatie team. Neem contact op met ons ondersteuningsteam voor meer informatie",
+    "416": "Your profile has been deleted by our operations team. Please reach out to our support team for more information."
+  },
+  "storeManagerSignIn": {
+    "200": "Success",
+    "400": "Slecht verzoek",
+    "401": "Incorrect wachtwoord, probeer opnieuw.",
+    "402": "Mobile niet geverifieerd",
+    "403": "Uw account is gedeactiveerd. Mail ons op support@loopz.today voor meer informatie",
+    "404": "Gebruiker niet gevonden ",
+    "405": "Uw account is niet geactiveerd, activeer uw account alstublieft .",
+    "406": "Email of telefoon nummer is incorrect.",
+    "407": "Uw account is niet geactiveerd, activeer uw account alstublieft ."
+  },
+  "managerSignIn": {
+    "200": "Success",
+    "400": "Slecht verzoek",
+    "401": "Incorrect wachtwoord",
+    "402": "Mobile niet geverifieerd",
+    "403": "Uw account is gedeactiveerd. Mail ons op support@loopz.today voor meer informatie.",
+    "404": "Gebruiker niet gevonden ",
+    "405": "Uw account is niet geactiveerd, activeer uw account alstublieft .",
+    "406": "Email of telefoon nummer is incorrect.",
+    "407": "Uw account is niet geactiveerd, activeer uw account alstublieft ."
+  },
+  "ordersList": {
+    "200": "Success",
+    "400": "Slecht verzoek"
+  },
+  "driverList": {
+    "200": "Success",
+    "400": "Slecht verzoek"
+  },
+  "products": {
+    "200": "Success",
+    "400": "Slecht verzoek",
+    "404": "Product niet gevonden "
+  },
+  "store": {
+    "200": "Success",
+    "400": "Slecht verzoek",
+    "404": "Product niet gevonden "
+  },
+  "franchise": {
+    "200": "Success",
+    "400": "Slecht verzoek",
+    "404": "Product niet gevonden "
+  },
+  "slaveGetProvider": {
+    "200": "Success.",
+    "404": "Not found"
+  },
+  "refreshToken": {
+    "200": "Success.",
+    "404": "Not found",
+    "477": "Ongeldig jwt .",
+    "499": "Verlopen jwt ."
+  },
+  "slaveLocation": {
+    "200": "Success."
+  },
+  "slaveGetProviderLoc": {
+    "200": "Success."
+  },
+  "supportConfig": {
+    "200": "Success.",
+    "404": "Not found"
+  },
+  "supportForgotPasswordE": {
+    "200": "Email met de reset link is verstuurd, check uw inbox alstublieft "
+  },
+  "supportForgotPassword": {
+    "200": "Verificatie code is naar uw geregistreerde nummer gestuurd",
+    "202": "Email met de reset link is verstuurd, check uw inbox alstublieft ",
+    "400": "Slecht verzoek",
+    "403": "Dit email is niet geregistreed bij ons, probeer een ander email.",
+    "404": "Not found",
+    "405": "Thanks for signing up. Bedankt voor het registreeren. Een van onze vertegenwoordigers neemt binnen 24 uur contact met u op om uw profiel in te stellen en alle benodigde documenten te ontvangen.",
+    "406": "Dit mobile nummer is niet geregistreed bij ons, probeer een ander nummer.",
+    "407": "Dit email is niet geregistreed bij ons, probeer een ander email.",
+    "429": "Je hebt het quotum voor verificatiepogingen opgebruikt. Probeer het na 24 uur opnieuw"
+  },
+  "supportResendOTP": {
+    "200": "Verificatie code is verstuurd.",
+    "404": "Data niet gevonden.",
+    "429": "Je hebt het quotum voor verificatiepogingen opgebruikt. Probeer het na 24 uur opnieuw"
+  },
+  "supportPassword": {
+    "200": "Uw wachtwoord is successvol bijgewerkt .",
+    "400": "Link is verlopen.",
+    "404": "Data niet gevonden."
+  },
+  "supportVerifyOTP": {
+    "200": "Verificatie success",
+    "400": "Slecht verzoek",
+    "401": "Dit mobile nummer is al geverifieerd ",
+    "405": "Verificatie code is fout.",
+    "406": "Telefoon nummer is fout",
+    "407": "Verificatie code is fout.",
+    "410": "ongeldige vereficatie code, probeer alstublieft opnieuw ",
+    "429": "Je hebt het quotum voor verificatiepogingen opgebruikt. Probeer het na 24 uur opnieuw"
+  },
+  "supportLogOut": {
+    "200": "Successvol uitgelogd .",
+    "204": "Gebruiker niet gevonden ."
+  },
+  "supportFAQ": {
+    "200": "Success."
+  },
+  "fare": {
+    "200": "Heb de gegevens.",
+    "400": "Het door u gekozen ordertype kon niet door de winkel worden verwerkt."
+  },
+  "supportCancelReason": {
+    "200": "Heb de gegevens."
+  },
+  "supportAccessToken": {
+    "200": "Heb de gegevens.",
+    "404": "Data niet gevonden."
+  },
+  "supportReview": {
+    "200": "Heb de gegevens.",
+    "404": "Data niet gevonden."
+  },
+  "supportGetReview": {
+    "200": "Heb de gegevens.",
+    "404": "Review niet gevonden"
+  },
+  "supportPhone": {
+    "200": "Update Successfully.",
+    "404": "Gebruiker niet gevonden ."
+  },
+  "addAddress": {
+    "200": "Adres successvol toegevoegd."
+  },
+  "editAddress": {
+    "200": "Address Updated Successfully."
+  },
+  "getAddress": {
+    "200": "Success."
+  },
+  "removeAddress": {
+    "200": "Adres successvol verwijdert"
+  },
+  "referalCode": {
+    "200": "Referral code is geldig",
+    "400": "Ongeldig referral code"
+  },
+  "disLogin": {
+    "200": "Login successvol",
+    "401": "Incorrect wachtwoord, probeer opnieuw.",
+    "404": "Gebruiker niet gevonden "
+  },
+  "disProvider": {
+    "200": "Heb de lijst met providers"
+  },
+  "createBooking": {
+    "200": "Boeking successvol gemaakt"
+  },
+  "ackBooking": {
+    "200": "boeking successvol bijgewrkt",
+    "404": "Boeking niet gevonden"
+  },
+  "responseBooking": {
+    "200": "boeking successvol bijgewrkt",
+    "404": "Boeking niet gevonden"
+  },
+  "statusBooking": {
+    "200": "boeking successvol bijgewrkt",
+    "400": "Holding status is niet bijgewerkt ",
+    "404": "Boeking niet gevonden"
+  },
+  "getMasterBooking": {
+    "200": "Get All Booking Details"
+  },
+  "historyMasterBooking": {
+    "200": "Get All Booking Details"
+  },
+  "getSlaveBooking": {
+    "200": "Get All Booking Details"
+  },
+  "getSlaveOneBooking": {
+    "200": "Get All Booking Details",
+    "404": "Boeking niet gevonden"
+  },
+  "cancelBookingSlave": {
+    "200": " Boeking successvol geannuleerd",
+    "404": "Boeking niet gevonden"
+  },
+  "timerBooking": {
+    "200": {
+      "0": "Timer is begonnen"
+    },
+    "400": {
+      "0": "Timer is begonnen"
+    },
+    "404": "Boeking niet gevonden"
+  },
+  "cancelBookingMaster": {
+    "200": " Boeking successvol geannuleerd",
+    "404": "Boeking niet gevonden"
+  },
+  "stripeAddCard": {
+    "200": "Successvol toegevoegd ",
+    "404": "Gebruiker niet gevonden "
+  },
+  "stripeGetCard": {
+    "200": "Successvol toegevoegd ",
+    "404": "Gebruiker niet gevonden "
+  },
+  "stripeDeleteCard": {
+    "200": "Ontvang kaartdetails.",
+    "402": "Kaart niet gevonden",
+    "404": "Gebruiker niet gevonden "
+  },
+  "stripeDefualtCard": {
+    "200": "Ontvang kaartdetails.",
+    "404": "Gebruiker niet gevonden "
+  },
+  "stripeAddBank": {
+    "200": "Successvol toegevoegd ",
+    "404": "Gebruiker niet gevonden "
+  },
+  "stripeGetBank": {
+    "200": "Successvol toegevoegd ",
+    "404": "Gebruiker niet gevonden "
+  },
+  "stripeDeleteBank": {
+    "200": "Kan standaardaccount niet verwijderen. Maak alstublieft een andere standaard account aan en verwijder vervolgens dit account.",
+    "400": "Kan standaardaccount niet verwijderen. Maak alstublieft een andere standaard account aan en verwijder vervolgens dit account.",
+    "404": "Geen dergelijhk account"
+  },
+  "stripeDefualtBank": {
+    "200": "Kan standaardaccount niet verwijderen. Maak alstublieft een andere standaard account aan en verwijder vervolgens dit account.",
+    "400": "Kan standaardaccount niet verwijderen. Maak alstublieft een andere standaard account aan en verwijder vervolgens dit account.",
+    "404": "Geen dergelijhk account"
+  },
+  "checkOperationZone": {
+    "200": "In operationele zone.",
+    "400": "Sorry, wij leveren niet naar uw selecteerde address op dit moment omdat het uit onze leverings bereik.",
+    "404": "Geen dergelijhk account"
+  },
+  "appVersionAlreadyExist": {
+    "400": "App versie met dit type bestaat al, selecteer alstublieft een nieuw type."
+  },
+  "stores": {
+    "200": "Success.",
+    "201": "Success",
+    "404": "Data niet gevonden"
+  },
+  "orders": {
+    "200": "Bestelling successvol geplaatst.",
+    "201": "Passagier heeft de boeking gecancelled.",
+    "301": "Boeking is al afgerond.",
+    "302": "Boeking status is al bijgewerkt.",
+    "303": "Boeking is verlopen of geaccepteerd by iemand anders",
+    "400": "Driver niet gevonden",
+    "402": "Kaart moet niet leeg zijn ",
+    "404": "Order niet gevonden"
+  },
+  "bookings": {
+    "200": "Successvol geupdate .",
+    "201": "Boeking geannuleerd .",
+    "301": "Boeking is al afgerond.",
+    "302": "Boeking status is al bijgewerkt.",
+    "303": "Boeking is verlopen of geaccepteerd by iemand anders",
+    "400": "Driver niet gevonden",
+    "403": "Bestelling is al geannuleerd",
+    "404": "Boekingen niet gevonden op de geselcteerde datum"
+  },
+  "assignedOrders": {
+    "200": "Successvol geupdate ."
+  },
+  "cart": {
+    "200": "Success.",
+    "201": "Successvol toegevoegd aan winkelmantje .",
+    "202": "Successvol verwijdert van winkelmantje.",
+    "203": "Successvol geupdate  to cart.",
+    "401": "%s is not currently accepting orders.",
+    "404": "Data niet gevonden",
+    "412": "Item already in cart."
+  },
+  "checkout": {
+    "200": "Success.",
+    "201": "Successvol toegevoegd aan winkelmantje .",
+    "202": "Successvol verwijdert van winkelmantje.",
+    "203": "Some of the items are modified inside the cart.",
+    "404": "Data niet gevonden",
+    "412": "Item already in cart."
+  },
+  "shoppingList": {
+    "200": "Success.",
+    "201": "Successvol toegevoegd aan shoppinglist.",
+    "202": "Successvol verwijdert van shoppinglist.",
+    "203": "Successvol geupdate  to shoppingList.",
+    "404": "Data niet gevonden",
+    "412": "Product bestaat al in je shoppinglist!."
+  },
+  "storeList": {
+    "200": "Success.",
+    "201": "Successvol toegevoed aan storelist.",
+    "202": "Successvol verwijdert van storelist.",
+    "203": "Successvol geupdate  to storeList.",
+    "404": "Data niet gevonden",
+    "412": "Store is al in storelist."
+  },
+  "wishList": {
+    "200": "Success.",
+    "201": "Successvol toegevoegd aan wishlist.",
+    "202": "Successvol verwijdert van wishlist.",
+    "203": "Successvol geupdate .",
+    "404": "Data niet gevonden",
+    "412": "Item already in wishList."
+  },
+  "PostProduct": {
+    "201": "Product is successvol toegevoed"
+  },
+  "GetProduct": {
+    "200": "Produce successvol gevonden.",
+    "412": "Product bestaat niet"
+  },
+  "vehicles": {
+    "200": "Successvol toegevoegd ",
+    "400": "Voertuig niet gevonden",
+    "401": "Voertuig niet gevonden",
+    "404": "Voertuig niet gevonden"
+  },
+  "verifyId": {
+    "401": "Uw identy kaart is niet geverifieerd .",
+    "402": "Uw MMJ kaart is niet geverifieerd."
+  },
+  "customer": {
+    "200": "Success",
+    "404": "Data niet gevonden"
+  },
+  "promoCampaigns": {
+    "200": "Success",
+    "400": "Geen promocodes gevonden",
+    "401": "Geen gegevens gevonden",
+    "404": "Data niet gevonden"
+  },
+  "promoCode": {
+    "200": "Coupon code succesvol toegevoegd",
+    "400": "Geen promocodes gevonden",
+    "401": "Geen gegevens gevonden",
+    "404": "Data niet gevonden"
+  },
+  "signIn": {
+    "405": "Uw account is verwijdert. neem contact op met ons support team voor meer informatie."
+  },
+  "postBookingAck": {
+    "200": "Success",
+    "400": "Boeking is verlopen.",
+    "404": "Boeking niet gevonden."
+  },
+  "bookingStatusMsg": {
+    "1": "Boeking aangevraagd.",
+    "2": "Driver geaccepteerd.",
+    "3": "Jij hebt de order gecancelled.",
+    "4": "Driver is geannuleerd.",
+    "6": "Driver is onderweg naar de winkel!.",
+    "7": "Driver is nu bij de winkel!.",
+    "8": "Driver geaccepteerd",
+    "9": "Boeking aangevraagd",
+    "10": "Onderweg .",
+    "11": "Gearriveerd.",
+    "12": "Delivery gestart",
+    "13": "Driver heeft the afleveradres bereikt.",
+    "14": "Voltooid  ",
+    "15": "Voorleggen",
+    "16": "Driver heeft de lading uitgeladen."
+  },
+  "fareMsg": {
+    "200": "Heb de gegevens.",
+    "400": "De volgende winkel is niet leverbaar voor uw locatie."
+  },
+  "storeSignUp": {
+    "200": "Registratie succesvol!."
+  },
+  "messages": {
+    "sessionMsgPushBody": "Uw sessie is verlopen, log opnieuw in om door te gaan naar uw account.",
+    "sessionMsgPushTitle": "Sessie verlopen",
+    "ban": "Je profiel is verbannen door onze beheerder, neem contact op met onze ondersteuning voor verdere vragen.",
+    "reject": "Je profiel is verbannen door onze beheerder, neem contact op met onze ondersteuning voor verdere vragen.",
+    "new": "Een van onze vertegenwoordigers neemt binnen 24 uur contact met u op om uw profiel in te stellen en alle benodigde documenten te ontvangen.",
+    "loggedOut": "U bent uitgelogd door ons operatorteam. Meld u opnieuw aan om door te gaan naar uw account."
+  },
+  "getAppConfig": {
+    "200": "success",
+    "402": "Ongeldig soort apparaat",
+    "404": "Account niet gevonden "
+  },
+  "getZoneErrMsg": {
+    "200": "Success.",
+    "404": "Geen stad gevonden "
+  },
+  "postStatus": {
+    "200": "success."
+  },
+  "postStatusRide": {
+    "200": "Success",
+    "400": "Ongeldig status kan niet bijgewerkt worden.",
+    "401": "Ongeldige locatie.",
+    "402": "Niet mogelijk om afstand uit te rekenen.",
+    "404": "Booking has been cancelled or completed."
+  },
+  "postRespondTo": {
+    "200": "Success",
+    "400": "Boeking is geannuleeerd of geaccepteerd door een ander driver.",
+    "404": "Boeking niet gevonden.",
+    "405": "Driver Data niet gevonden.",
+    "406": "Boeking respons status niet gevonden.",
+    "407": "Voertuig informatie niet gevonden."
+  },
+  "logs": {
+    "200": "Nieuw log is successvol gepost"
+  },
+  "promo": {
+    "200": "Promo succesvol toegevoegd"
+  },
+  "Success.": "Success.",
+  "vouchers": {
+    "200": "Je hebt met succes een hoeveelheid verzilverd,",
+    "400": "Ongeldig status kan niet bijgewerkt worden.",
+    "401": "Verkeerde locatie.",
+    "402": "Niet mogelijk om afstand uit te rekenen.",
+    "404": "Voucher verlopen."
+  },
+  "inventoryCheck": {
+    "400": "product is niet meer op voorraad.",
+    "403": "Sommige items in uw winkelwagentje zijn niet op voorraad."
+  },
+  "customerAddressPost": "customerAddressPost",
+  "adminPostSignIn": {
+    "404": "admin profiel niet gevonden"
+  },
+  "inventoryStock": {
+    "400": "Onmogelijk om meer te bezorgen dan de beschikbare voorraad."
+  },
+  "customerPostBooking": "CustomerPostBooking",
+  "%s is not currently accepting orders.": "%s neemt op dit moment geen orders aan."
+}

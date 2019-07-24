@@ -47,6 +47,7 @@ const payload = joi
   .required();
 
 const handler = async (req, h) => {
+
   const userData = {
     name: req.payload.userName,
     email: req.payload.email,
@@ -60,13 +61,13 @@ const handler = async (req, h) => {
     return Boom.notAcceptable("Password must be match");
   try {
     const data = await user.findOne(checkCondition); //check if user already exist or not
-    if (data) return Boom.conflict("user already exist");
+    if (data) return h.response(req.i18n.__('genericErrMsg')['400']).code(400);
     const hashPass = await generate.genHash(req.payload.password); //generate hash password
 
     userData["password"] = hashPass;
     const result = await user.addUser(userData); //addUser query
     if ((result.result.n = 1))
-      return h.response({ message: "Account succesfully created.." });
+      return h.response({ message: req.i18n.__('genericErrMsg')['200'] });
     return Boom.badImplementation("Some thing went wrong");
   } catch (error) {
     return Boom.badImplementation(error);
