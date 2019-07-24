@@ -53,13 +53,19 @@ const validateJwtHeader = joi
     authorization: joi
       .string()
       .required()
-      .description("Put your Auth token here")
+      .description("Put your Auth token here"),
+      language: joi.string().required().default('en').description('en - English').error(new Error('Language is incorrect')).required(),
   })
-  .unknown();
+  .unknown()
+
+  const validateLanguageHeader=joi.object({
+    language: joi.string().required().default('en').description('en - English').error(new Error('Language is incorrect')).required(),
+  }).unknown()
 
 module.exports = {
   validateJwt,
   validateJwtHeader,
   validAccessToken,
-  validRefreshToken
+  validRefreshToken,
+  validateLanguageHeader
 };
