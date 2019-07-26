@@ -3,6 +3,7 @@ var geoip = require("geoip-lite");
 
 const customer = require("../../../../models/customer");
 const zendesk = require("../../../../models/zendesk");
+const gen = require("../../../middleware/generate");
 
 module.exports = async (req, h) => {
   req.payload.zendeskId = "";
@@ -50,8 +51,31 @@ module.exports = async (req, h) => {
       address: req.payload.ipAddress ? req.payload.ipAddress : "",
       city: geoCalcIp ? geoCalcIp.city : ""
     };
+
+    //find zone from where customer login
     req.payload.cityId = "";
+    const zone = await cities.inZone({
+      lat: 77.59162902832031,
+      long: 13.036502086099881
+    });
+    req.payload.cityId = zone ? zone.cityId : "";
+    req.payload.registeredFromCity = zone ? zone.cityName : "";
+
+    req.payload.id = req.auth.credentials._id;
+    req.payload.userReferalCode = req.payload.referralCode
+      ? req.payload.referralCode
+      : "";
+    req.payload.referralCode = "";
+
+    req.payload.password = await gen.genHash(req.payload.password);
+    req.payload.userType = 1; //type 1 for insert new user
+
+    const isExist = await customer.isExistsWithIdType({
+      _id: new ObjectID(req.auth.credentials._id)
+    });
+
+    if (isExist) req.payload.userType = 3; //type 3 for update user
   } catch (error) {
-    return h.response({ error: error }).code(400);
+    return h.response({ error: error }).code(500);
   }
 };

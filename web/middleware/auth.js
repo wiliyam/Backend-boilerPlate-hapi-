@@ -15,6 +15,11 @@ exports.register = async server => {
     verifyOptions: { algorithms: ["HS256"] }
   });
 
+  server.auth.strategy("guestJWT", "jwt", {
+    key: JwtKey,
+    validate: validate.validateJwt,
+    verifyOptions: { algorithms: ["HS256"] }
+  });
   server.auth.default("jwt2"); //default auth for all routes
 };
 

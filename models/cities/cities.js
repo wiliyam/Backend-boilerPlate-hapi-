@@ -7,15 +7,19 @@ const db = require("../../library/mongodb");
 
 const tableName = "cities";
 
+/**
+ * find zone of current location
+ * @param {*} params
+ */
 const inZone = async params => {
   const result = await db
     .get()
     .collection(tableName)
     .findOne(
       {
-        "cities.polygons": {
+        polygons: {
           $geoIntersects: {
-            $geometry: { type: "Point", coordinates: [params.long, params.lat] }
+            $geometry: { type: "Point", coordinates: [params.lat, params.long] }
           }
         }
       },

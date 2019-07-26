@@ -1,8 +1,6 @@
-
-
-const validator=require('./validators')
-const headerValidation=require('../../../middleware/validations')
-const handler=require('./post')
+const validator = require("./validators");
+const headerValidation = require("../../../middleware/validations");
+const handler = require("./post");
 
 const entity = "customer";
 exports.pkg = {
@@ -16,16 +14,16 @@ exports.register = (server, options) => {
     handler: handler,
     vhost: "localhost",
     config: {
-      auth: false,
+      auth: "guestJWT",
       tags: ["api", entity],
-      description: "API is use for register new user", 
+      description: "API is use for register new user",
 
       validate: {
-        headers:headerValidation.validateLanguageHeader,
+        headers: headerValidation.validateLanguageHeader,
         payload: validator.payload,
-        failAction:headerValidation.faildAction
+        failAction: headerValidation.faildAction
       },
-      response:validator.response
+      response: validator.response
     }
   });
 };

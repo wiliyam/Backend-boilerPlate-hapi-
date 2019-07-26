@@ -1,4 +1,4 @@
-const signUp=require('./signUp')
+const signUp = require("./signUp");
+const guestLogin = require("./guestLogin");
 
-
-module.exports=[].concat(signUp)
+module.exports = [].concat(guestLogin, signUp);

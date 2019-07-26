@@ -22,7 +22,7 @@ const validRefreshToken = async (condition, token) => {
 
 //for validate jwt2 strategy
 
-const validateJwt = async function(decoded, req, h) {
+const validateJwt = async (decoded, req, h) => {
   const { id, isAdmin } = decoded;
 
   const condition = { _id: ObjectId(id) };
@@ -54,17 +54,37 @@ const validateJwtHeader = joi
       .string()
       .required()
       .description("Put your Auth token here"),
-      language: joi.string().required().default('en').description('en - English').error(new Error('Language is incorrect')).required(),
+    language: joi
+      .string()
+      .required()
+      .default("en")
+      .description("en - English")
+      .error(new Error("Language is incorrect"))
+      .required()
   })
-  .unknown()
+  .unknown();
 
-  const validateLanguageHeader=joi.object({
-    language: joi.string().required().default('en').description('en - English').error(new Error('Language is incorrect')).required(),
-  }).unknown()
+const validateLanguageHeader = joi
+  .object({
+    language: joi
+      .string()
+      .required()
+      .default("en")
+      .description("en - English")
+      .error(new Error("Language is incorrect"))
+      .required()
+  })
+  .unknown();
 
-  const faildAction = function faildAction(req, reply, source, error) {
-    return reply({ message: error.output.payload.message }).code(error.output.statusCode);
-}
+const faildAction = function faildAction(req, reply, source, error) {
+  return reply({ message: error.output.payload.message }).code(
+    error.output.statusCode
+  );
+};
+
+const valisJwtGauest = (decoded, req, h) => {
+  return true;
+};
 module.exports = {
   validateJwt,
   validateJwtHeader,
