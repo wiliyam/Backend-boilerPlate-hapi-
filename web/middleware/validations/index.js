@@ -62,10 +62,14 @@ const validateJwtHeader = joi
     language: joi.string().required().default('en').description('en - English').error(new Error('Language is incorrect')).required(),
   }).unknown()
 
+  const faildAction = function faildAction(req, reply, source, error) {
+    return reply({ message: error.output.payload.message }).code(error.output.statusCode);
+}
 module.exports = {
   validateJwt,
   validateJwtHeader,
   validAccessToken,
   validRefreshToken,
-  validateLanguageHeader
+  validateLanguageHeader,
+  faildAction
 };

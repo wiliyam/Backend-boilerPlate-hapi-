@@ -1,26 +1,31 @@
-const api = require("./post");
-const Joi=require('joi')
-const headerValidation=require('../../../middleware/validations')
 
-const entity = "user";
+
+const validator=require('./validators')
+const headerValidation=require('../../../middleware/validations')
+const handler=require('./post')
+
+const entity = "customer";
 exports.pkg = {
-  name: "signUp"
+  name: `${entity}signUp`
 };
 
 exports.register = (server, options) => {
   server.route({
     method: "POST",
     path: `/${entity}/signUp`,
-    handler: api.handler,
+    handler: handler,
     vhost: "localhost",
     config: {
       auth: false,
       tags: ["api", entity],
-      description: "API is use for register new user",
+      description: "API is use for register new user", 
+
       validate: {
         headers:headerValidation.validateLanguageHeader,
-        payload: api.payload
-      }
+        payload: validator.payload,
+        failAction:headerValidation.faildAction
+      },
+      response:validator.response
     }
   });
 };
