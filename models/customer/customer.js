@@ -41,7 +41,7 @@ const isExistsWithIdType = async params => {
  * for update latitude and longitude of customer
  * @param {*} params 
  */
-const updateLatLong = (params) => {
+const updateLatLong = async (params) => {
   const result =await db.get().collection(tableName)
       .findOneAndUpdate(
           { 'mobileDevices.deviceId': params.deviceId, "guestToken": false, "userType": 3 },

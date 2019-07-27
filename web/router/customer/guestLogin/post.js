@@ -1,6 +1,6 @@
 const customer = require("../../../../models/customer");
 const gen=require('../../../middleware/generate')
-module.exports = (req, h) => {
+module.exports = async (req, h) => {
   try {
 
     const result =await customer.updateLatLong(req.payload)

@@ -1,0 +1,195 @@
+{"message":"Master 17554 is running","level":"info"}
+{"message":"Forking process number 0...","level":"info"}
+{"message":"Forking process number 1...","level":"info"}
+{"message":"Forking process number 2...","level":"info"}
+{"message":"Forking process number 3...","level":"info"}
+{"message":"worker 17579 died","level":"info"}
+{"message":"worker 17566 died","level":"info"}
+{"message":"worker 17565 died","level":"info"}
+{"message":"worker 17572 died","level":"info"}
+{"message":"worker 17609 died","level":"info"}
+{"message":"worker 17623 died","level":"info"}
+{"message":"worker 17616 died","level":"info"}
+{"message":"worker 17630 died","level":"info"}
+{"message":"worker 17660 died","level":"info"}
+{"message":"worker 17653 died","level":"info"}
+{"message":"worker 17667 died","level":"info"}
+{"message":"worker 17674 died","level":"info"}
+{"message":"worker 17697 died","level":"info"}
+{"message":"worker 17711 died","level":"info"}
+{"message":"worker 17704 died","level":"info"}
+{"message":"worker 17718 died","level":"info"}
+{"message":"worker 17741 died","level":"info"}
+{"message":"worker 17748 died","level":"info"}
+{"message":"worker 17754 died","level":"info"}
+{"message":"worker 17762 died","level":"info"}
+{"message":"worker 17792 died","level":"info"}
+{"message":"worker 17785 died","level":"info"}
+{"message":"worker 17805 died","level":"info"}
+{"message":"worker 17799 died","level":"info"}
+{"message":"Master 17949 is running","level":"info"}
+{"message":"Forking process number 0...","level":"info"}
+{"message":"Forking process number 1...","level":"info"}
+{"message":"Forking process number 2...","level":"info"}
+{"message":"Forking process number 3...","level":"info"}
+{"message":"worker 17960 died","level":"info"}
+{"message":"worker 17967 died","level":"info"}
+{"message":"worker 17961 died","level":"info"}
+{"message":"worker 17973 died","level":"info"}
+{"message":"worker 18004 died","level":"info"}
+{"message":"worker 18013 died","level":"info"}
+{"message":"worker 18012 died","level":"info"}
+{"message":"worker 18026 died","level":"info"}
+{"message":"Master 18137 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:37 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:37 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:37 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:37 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:38 GMT+0530  worker 18148 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:38 GMT+0530  worker 18154 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:38 GMT+0530  worker 18156 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:38 GMT+0530  worker 18162 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:39 GMT+0530  worker 18205 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:39 GMT+0530  worker 18192 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:39 GMT+0530  worker 18198 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:39 GMT+0530  worker 18207 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:40 GMT+0530  worker 18237 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:40 GMT+0530  worker 18244 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:40 GMT+0530  worker 18236 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:21:40 GMT+0530  worker 18257 died","level":"info"}
+{"message":"Master 18341 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:54 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:54 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:54 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:54 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:55 GMT+0530  worker 18352 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:55 GMT+0530  worker 18360 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:55 GMT+0530  worker 18366 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:55 GMT+0530  worker 18358 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:56 GMT+0530  worker 18403 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:56 GMT+0530  worker 18396 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:56 GMT+0530  worker 18405 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:22:56 GMT+0530  worker 18416 died","level":"info"}
+{"message":"Master 18555 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530  worker 18568 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530  worker 18576 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530  worker 18582 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:49 GMT+0530  worker 18574 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:50 GMT+0530  worker 18612 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:50 GMT+0530  worker 18626 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:50 GMT+0530  worker 18619 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:25:50 GMT+0530  worker 18627 died","level":"info"}
+{"message":"Master 18789 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:45 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:45 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:45 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:45 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:46 GMT+0530  worker 18806 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:46 GMT+0530  worker 18814 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:46 GMT+0530  worker 18800 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:47 GMT+0530  worker 18808 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:47 GMT+0530  worker 18846 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:47 GMT+0530  worker 18859 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:48 GMT+0530  worker 18845 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:26:48 GMT+0530  worker 18866 died","level":"info"}
+{"message":"Master 18982 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:04 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:04 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:04 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:04 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:05 GMT+0530  worker 18999 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:05 GMT+0530  worker 19001 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:05 GMT+0530  worker 19007 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:30:05 GMT+0530  worker 18993 died","level":"info"}
+{"message":"Master 19146 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530  worker 19157 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530  worker 19165 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530  worker 19163 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:02 GMT+0530  worker 19171 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:03 GMT+0530  worker 19208 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:03 GMT+0530  worker 19210 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:03 GMT+0530  worker 19201 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:32:03 GMT+0530  worker 19222 died","level":"info"}
+{"message":"Master 22623 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:15 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:15 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:15 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:15 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:16 GMT+0530  worker 22634 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:16 GMT+0530  worker 22640 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:16 GMT+0530  worker 22648 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:16 GMT+0530  worker 22642 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:17 GMT+0530  worker 22678 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:17 GMT+0530  worker 22679 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:17 GMT+0530  worker 22681 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:42:17 GMT+0530  worker 22699 died","level":"info"}
+{"message":"Master 22848 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:40 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:40 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:40 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:40 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:41 GMT+0530  worker 22859 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:41 GMT+0530  worker 22865 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:41 GMT+0530  worker 22867 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:41 GMT+0530  worker 22873 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:42 GMT+0530  worker 22903 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:42 GMT+0530  worker 22909 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:42 GMT+0530  worker 22916 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:42 GMT+0530  worker 22923 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:43 GMT+0530  worker 22947 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:43 GMT+0530  worker 22954 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:43 GMT+0530  worker 22961 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:43:43 GMT+0530  worker 22956 died","level":"info"}
+{"message":"Master 23132 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:48 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:48 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:48 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:48 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:49 GMT+0530  worker 23143 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:49 GMT+0530  worker 23149 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:49 GMT+0530  worker 23151 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:49 GMT+0530  worker 23162 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:50 GMT+0530  worker 23187 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:50 GMT+0530  worker 23188 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:50 GMT+0530  worker 23208 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:46:50 GMT+0530  worker 23194 died","level":"info"}
+{"message":"Master 28834 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:39 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:39 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:39 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:39 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:41 GMT+0530  worker 28859 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:41 GMT+0530  worker 28851 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:41 GMT+0530  worker 28845 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:41 GMT+0530  worker 28853 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:42 GMT+0530  worker 28895 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:42 GMT+0530  worker 28893 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:42 GMT+0530  worker 28906 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:53:42 GMT+0530  worker 28908 died","level":"info"}
+{"message":"Master 29019 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:11 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:11 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:11 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:11 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:14 GMT+0530  worker 29036 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:14 GMT+0530  worker 29030 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:14 GMT+0530  worker 29044 died","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:14 GMT+0530  worker 29038 died","level":"info"}
+{"message":"Master 29161 is running","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:54 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:54 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:54 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 12:54:54 GMT+0530 Forking process number 3...","level":"info"}
+{"message":"Master 32108 is running","level":"info"}
+{"message":"Sat Jul 27 2019 13:06:28 GMT+0530 Forking process number 0...","level":"info"}
+{"message":"Sat Jul 27 2019 13:06:28 GMT+0530 Forking process number 1...","level":"info"}
+{"message":"Sat Jul 27 2019 13:06:28 GMT+0530 Forking process number 2...","level":"info"}
+{"message":"Sat Jul 27 2019 13:06:28 GMT+0530 Forking process number 3...","level":"info"}
