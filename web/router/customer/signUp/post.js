@@ -1,11 +1,13 @@
 const ObjectID = require("mongodb").ObjectID;
 var geoip = require("geoip-lite");
 
+const verificationCode = require("../../../../models/verificationCode");
 const customer = require("../../../../models/customer");
+const mobileDevices = require("../../../../models/mobileDevices");
 const zendesk = require("../../../../models/zendesk");
 const gen = require("../../../middleware/generate");
 
-module.exports = async (req, h) => {
+const signUphandler = async (req, h) => {
   req.payload.zendeskId = "";
   let mongoId = new ObjectID();
   let fcmTopic = "FCM-" + mongoId.toString() + moment().unix(); //generate a new fcmTopic on new login
@@ -33,12 +35,13 @@ module.exports = async (req, h) => {
       h.response({ message: req.i18n.__("postSignUp")["412"] }).code(412);
 
     //create user at zendesk and generate id
-    const result = await zendesk.users.post(dataArr, url);
+    let result = await zendesk.users.post(dataArr, url);
     req.payload.zendeskId = result.user ? result.user.id : "";
 
     //check if the phone is already registered
     count = await customer.count({
-      email: req.payload.email,
+      countryCode: req.payload.countryCode,
+      phone: req.payload.mobile,
       status: { $nin: [4, "4"] },
       userType: { $nin: [4] }
     });
@@ -55,8 +58,8 @@ module.exports = async (req, h) => {
     //find zone from where customer login
     req.payload.cityId = "";
     const zone = await cities.inZone({
-      lat: 77.59162902832031,
-      long: 13.036502086099881
+      lat: req.payload.latitude || 0,
+      long: req.payload.longitude || 0
     });
     req.payload.cityId = zone ? zone.cityId : "";
     req.payload.registeredFromCity = zone ? zone.cityName : "";
@@ -74,8 +77,54 @@ module.exports = async (req, h) => {
       _id: new ObjectID(req.auth.credentials._id)
     });
 
-    if (isExist) req.payload.userType = 3; //type 3 for update user
+    if (isExist) {
+      req.payload.userType = 3;
+      let result = customer.saveDetails(req.payload);
+      let id = req.auth.credentials
+        ? req.auth.credentials._id.toString()
+        : result.value._id;
+      req.payload.newUserId = id;
+      updateLogs(id, 1, req.payload); //asynchronously update the login status
+    } //type 3 for update user
+    else {
+      req.payload.userType = 1; //user type 1 for insert
+      customer.saveDetails(req.payload, (err, result) => {
+        let result = customer.saveDetails(req.payload);
+        let id = result.value._id.toString();
+        req.payload.newUserId = id;
+
+        updateLogs(id, 1, req.payload); //asynchronously update the login status
+      });
+    }
+
+    let result = await verificationCode.saveVerificationCode({
+      id: req.auth.credentials._id.toString(),
+      email: req.payload.email
+    });
   } catch (error) {
     return h.response({ error: error }).code(500);
   }
 };
+
+/**
+ * @function
+ * @name updateLogs
+ * @param {string} id - customer id.
+ * @param {string} userType - customer or guest
+ * @param {object} data - data coming from req.payload
+ */
+
+const updateLogs = async (id, userType, data) => {
+  data.id = id;
+  data.userType = userType;
+  data.userTypeMsg = "Customer";
+  try {
+    let result = await mobileDevices.updateMobileDevices(data);
+
+    let devicelog = await customer.updateDeviceLog(data);
+  } catch (error) {
+    return h.response({ error: error }).code(500);
+  }
+};
+
+module.exports = signUphandler;

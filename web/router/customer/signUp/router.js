@@ -1,6 +1,6 @@
 const validator = require("./validators");
 const headerValidation = require("../../../middleware/validations");
-const handler = require("./post");
+const signUphandler = require("./post");
 
 const entity = "customer";
 exports.pkg = {
@@ -11,7 +11,7 @@ exports.register = (server, options) => {
   server.route({
     method: "POST",
     path: `/${entity}/signUp`,
-    handler: handler,
+    handler: signUphandler,
     vhost: "localhost",
     config: {
       auth: "guestJWT",
