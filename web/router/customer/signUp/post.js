@@ -1,6 +1,7 @@
 const ObjectID = require("mongodb").ObjectID;
 var geoip = require("geoip-lite");
 
+const appconfig = require("../../../../models/appConfig");
 const verificationCode = require("../../../../models/verificationCode");
 const customer = require("../../../../models/customer");
 const mobileDevices = require("../../../../models/mobileDevices");
@@ -101,6 +102,13 @@ const signUphandler = async (req, h) => {
       id: req.auth.credentials._id.toString(),
       email: req.payload.email
     });
+
+    let appConfig = appconfig.get({});
+
+    let accessTokenExp = 604800; //7days
+    accessTokenExp = appConfig.securitySettings
+      ? parseInt(appConfig.securitySettings.accessToken)
+      : accessTokenExp;
   } catch (error) {
     return h.response({ error: error }).code(500);
   }
